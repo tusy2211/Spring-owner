@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Spring-security-jwt/Springsecurityjwt.iml" filepath="$PROJECT_DIR$/Spring-security-jwt/Springsecurityjwt.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hibernate-Validator/jpa-hibernate-custom-validation.iml" filepath="$PROJECT_DIR$/Hibernate-Validator/jpa-hibernate-custom-validation.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-learning.iml" filepath="$PROJECT_DIR$/spring-boot-learning.iml" />
     </modules>

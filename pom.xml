@@ -28,6 +28,7 @@
 
   <modules>
     <module>Hibernate-Validator</module>
+      <module>Spring-security-jwt</module>
   </modules>
 
   <properties>
