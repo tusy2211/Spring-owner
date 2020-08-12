@@ -38,7 +38,7 @@ public class JwtTokenProvider {
     // Lấy thông tin User Id từ JWT
     public Long getUserIdFromToken(String token) {
         Claims claims = Jwts.parser()
-                .setSigningKey(JWT_SECRET)
+                .setSigningKey(JWT_SECRET.getBytes())
                 .parseClaimsJws(token)
                 .getBody();
         return Long.parseLong(claims.getSubject());
@@ -47,7 +47,7 @@ public class JwtTokenProvider {
     // validate thông tin token
     public boolean validateToken(String token) {
         try {
-            Jwts.parser().setSigningKey(JWT_SECRET).parseClaimsJws(token);
+            Jwts.parser().setSigningKey(JWT_SECRET.getBytes()).parseClaimsJws(token);
             return true;
         } catch (MalformedJwtException ex) {
             log.error("Invalid JWT token");

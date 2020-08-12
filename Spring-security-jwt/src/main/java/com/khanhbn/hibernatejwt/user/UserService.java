@@ -19,12 +19,12 @@ public class UserService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-//        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         User user = userRepository.findByUsername(s);
         if(null == user) {
             throw new UsernameNotFoundException("User is not in system!");
         }
-//        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         return new CustomUserDetails(user);
     }
 
